@@ -1,9 +1,9 @@
-//CONSTRUCTOR
-public class Employee {
+//CONSTRUCTOR FOR Employee name,id,age.
+public class Constructor {
     String Name;
     int Id;
     int Age;
-    public Employee(String a,int b,int c){
+    public Constructor(String a,int b,int c){
       this.Name=a;
       this.Id=b;
       this.Age=c;
@@ -15,7 +15,7 @@ public class Employee {
         System.out.println("EMployee age :" +Age);
     }
     public static void main(String[] args) {
-        Employee emp= new Employee("Bony",4973, 22);
+        Constructor emp= new Constructore("Bony",4973, 22);
         emp.print();
     }
 }
