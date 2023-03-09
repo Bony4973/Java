@@ -1,27 +1,20 @@
 public class Employee {
-    String id;
     String name;
-    Address address;
-    public Employee(String id, String name,Address address) {
-
-        this.id = id;
-        this.name = name;
-        this.address=address;
+    AddressInfo addressInfo;
+    InsuranceInfo insuranceInfo;
+    public Employee(String name, AddressInfo addressInfo, InsuranceInfo insuranceInfo)
+    {
+        this.name=name;
+        this.addressInfo=addressInfo;
+        this.insuranceInfo=insuranceInfo;
     }
-    void display(){
-
-        System.out.println(id+" "+name);
-
-        System.out.println(address.city+" "+address.Division+" "+address.country);
-
-    }
-    public static void main(String[] args) {
-
-        Address address1=new Address("Savar","Dhaka","Bangladesg");
-        Address address2=new Address("Natore","Rajshahi","Bangladesh");
-        Employee emp=new Employee("221-15-4972","Roky",address1);
-        Employee emp1=new Employee("221-15-4973","Bony",address2);
-        emp.display();
-        emp1.display();
+    public void display()
+    {
+        System.out.println("Name of Employee : "+this.name);
+        System.out.println("Address of Employee: "+
+                addressInfo.street+", "+addressInfo.city+", "+
+                addressInfo.state+", "+addressInfo.postalCode);
+        System.out.println("Insurance information: "+
+                insuranceInfo.policyName+", "+insuranceInfo.policyId);
     }
 }
